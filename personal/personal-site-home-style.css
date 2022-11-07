@@ -1,0 +1,58 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+:root{
+    /* font */
+  --heading-font: "Noto Sans JP";
+  --paragraph-font: 'Noto Sans JP';
+  --text-color: #3D484F
+}
+
+
+/* Header */
+.site-head{
+    padding: 12px;
+    display: inline-block;
+}
+.home-title{
+    font-size: 64px;
+    font-family: var(--heading-font);
+    color: var(--text-color);
+    position: relative;
+    left: 200px;
+    bottom: 150px;
+}
+.logo{
+    width: 148px;
+    height: 148px;
+    position: relative;
+    display: inline-block;
+    top: 0px;
+    left: 0px;
+}
+
+.logo-img{
+    width: 146px;
+    height: 146px;
+    position: absolute;
+
+
+    background-image: url("Casual Gamer Logo.png");
+    background-size: 145px;
+    background-position: 0px;
+}
+.logo-img:hover{
+
+    width: 146px;
+    height: 146px;
+    position: absolute;
+    
+    background-image: url("Casual Gamer Logo - Gold.png");
+    background-size: 145px;
+    background-position: 0px;
+}
+
+
+body{
+    background-color: #E6F2F2;
+}
