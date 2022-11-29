@@ -6,6 +6,9 @@
   --heading-font: "Noto Sans JP";
   --paragraph-font: 'Noto Sans JP';
   --text-color: #3D484F
+  
+  --image-margin: 25%;
+  --image-margin-top: 5%
 }
 
 
@@ -71,7 +74,7 @@
 #background {
     
     height: 665.31px;
-    width: 941.95px;
+    width: 1000.95px;
     background-color: #3D484F;
     grid-column: 1/3;
     grid-row: 1/3;
@@ -85,31 +88,44 @@ a{
 }
 
 .pokemon-post{
-    position: relative;
-    top: 25px;
+   
+    width: 80%;
+    height: 65%;
+    margin: 25%;
+    padding-top: 5%;
+    --image-margin: 15%;
     grid-column: 3/6;
-    grid-row: 1/3;
-    transition: all ease-in-out 0.25s;
-
+    grid-row: 1/2;
+    transition: all ease-in-out 0.3s;
+    margin-top: -2%;
+    
 }
 
 .wow-post{
-    position: relative;
-    top: 25px;
+
+    width: 80%;
+    height: 65%;
+    margin: 25%;
+    padding-top: 5%;
+    --image-margin: 15%;
     grid-column: 3/6;
     grid-row: 2/3;
-    transition: all ease-in-out 0.25s;
-
+    transition: all ease-in-out 0.3s;
+    margin-top: -2%;
 }
 
 .pokemon-post:hover, .wow-post:hover{
 
     scale: 115%;
-    transition: all ease-in-out 0.25s;
+    transition: all ease-in-out 0.3s;
+    background-color: #E2DBBE;
+  
 
 }
 
+
 .post-title{
+    scale: 100%;
     color: #3D484F;
     text-align: center;
     font-size: 24px;
@@ -118,6 +134,7 @@ a{
 }
 
 .text-align{
+    scale: 100%;
     color: #3D484F;
     text-align: center;
     font-size: 24px;
@@ -126,7 +143,7 @@ a{
 }
 
 .card-img{
-    margin-left:24%;
+    margin-left: var(--image-margin);
     width: 196px;
     height: 196px;
     box-shadow: 0px 0px 25px 0.5px #3D484F;
