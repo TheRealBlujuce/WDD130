@@ -169,6 +169,12 @@ a{
     left: 35px;
 }
 
+.footer{
+    position: relative;
+    text-align: center;
+    left: 130px;
+}
+
 @media screen and (max-width: 400px) {
 
 .home-grid{
