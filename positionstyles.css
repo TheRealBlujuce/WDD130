@@ -1,60 +1,86 @@
 /* CSS - Name: "positionstyles.css" */
 /* Activity 1 styles */
 .content1 {
-  /* This is the parent of the activity 1 boxes. */
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
-  grid-gap: 20px;
+  gap: 20px;
 }
-.red1 { 
-  width: 100%; 
-  height: 100px; 
-  background-color: red; 
-  grid-column: 1/3;
-} 
-.green1 {
-  width: 200px; 
-  height: 200px; 
-  background-color: green; 
 
-} 
-.yellow1 {
-  width: 200px; 
-  height: 200px; 
-  background-color: gold; 
-} 
-.blue1 {
-  width: 100%; 
-  height: 100px; 
-  background-color: blue; 
+.red1 {
+  width: 100%;
+  height: 100px;
+  background-color: red;
   grid-column: 1/3;
-} 
+}
+
+.green1, .yellow1 {
+  width: 200px;
+  height: 200px;
+}
+
+.green1 {
+  background-color: green;
+}
+
+.yellow1 {
+  background-color: yellow;
+}
+
+.blue1 {
+  width: 100%;
+  height: 100px;
+  background-color: blue;
+  grid-column: 1/3;
+}
+
 /* Activity 2 styles */ 
 .content2 {
-  /* This is the parent of the activity 2 boxes. */
-  
+    display: grid;
+    grid-template-columns: repeat(5, 50px); /* 5 equal-width columns */
+    margin-top: 50px;
+    width: 100%;
+    position: relative;
 }
+
+.red2, .green2, .yellow2, .blue2 {
+    width: 50px;  /* Set width of squares */
+    height: 50px; /* Set height of squares */
+}
+
 .red2 {
-  width: 100px; 
-  height: 100px; 
-  background-color: red; 
-} 
-.green2 { 
-  width: 100px; 
-  height: 100px; 
-  background-color: green; 
-} 
+    background-color: red;
+    grid-column: 1; /* Red starts in the first column */
+    grid-row: 1;    /* Red starts in the first row */
+}
+
+.green2 {
+    background-color: green;
+    grid-column: 2; /* Green starts in the same column as red */
+    grid-row: 2;    /* Green overlaps red in the same row */
+    margin-top: -25px;  /* Move green up to overlap red */
+    margin-left: -25px;  /* Move green up to overlap red */
+}
+
 .yellow2 {
-  width: 100px; 
-  height: 100px; 
-  background-color: gold; 
-} 
+    background-color: yellow;
+    grid-column: 3; /* Yellow starts in the same column as green */
+    grid-row: 3;    /* Yellow overlaps green */
+    margin-top: -25px;  /* Move yellow up to overlap green */
+    margin-left: -50px;  /* Move green up to overlap red */
+}
+
 .blue2 {
-  width: 100px; 
-  height: 100px; 
-  background-color: blue; 
-} 
+    background-color: blue;
+    grid-column: 4; /* Blue starts in the same column as yellow */
+    grid-row: 4;    /* Blue overlaps yellow */
+    margin-top: -25px;  /* Move blue up to overlap yellow */
+    margin-left: -75px;  /* Move green up to overlap red */
+}
+
+
+
+
 /* Activity 3 styles */ 
 .content3 {
   /* This is the parent of the activity 3 boxes. */
@@ -87,6 +113,8 @@
   background-color: blue; 
   grid-column: 1/3;
 } 
+
+
 /* Activity 4 styles */ 
 .content4 {
   /* This is the parent of the activity 4 boxes. */
@@ -120,33 +148,50 @@
   background-color: blue; 
   grid-column: 2/4;
 } 
+
+
 /* Activity 5 styles */ 
 .content5 {
-  /* This is the parent of the activity 5 boxes. */
-  height: 400px;
+  width: 100%;
+  max-width: 800px; /* Optional to limit the width */
+  margin: 0 auto;
 }
-.red5 { 
-  width: 100px; 
-  height: 100px; 
-  background-color: red; 
-} 
-.green5 { 
-  width: 100px; 
-  height: 100px; 
-  background-color: green; 
 
-} 
-.yellow5 {
-  width: 100px; 
-  height: 100px; 
-  background-color: gold; 
+.red5, .blue5, .green5, .yellow5 {
+  width: 100px;   /* Set width of the squares */
+  height: 100px;  /* Set height of the squares */
+  margin-right: 10px;  /* Space between the squares */
+  margin-bottom: 10px; /* Optional, space below each square */
+}
 
-} 
+.red5 {
+  background-color: red;
+  float: left; /* Float red square to the left */
+}
+
 .blue5 {
-  width: 100px; 
-  height: 100px; 
-  background-color: blue; 
-} 
+  background-color: blue;
+  float: left; /* Float blue square to the left */
+}
+
+.green5 {
+  background-color: green;
+  float: left; /* Float green square to the left */
+}
+
+.yellow5 {
+  background-color: yellow;
+  float: left; /* Float yellow square to the left */
+}
+
+/* To clear the floats and ensure proper container wrapping */
+.content5::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+
 /* Activity 6 styles */ 
 .content6 {
   /* This is the parent of the activity 6 boxes. */
